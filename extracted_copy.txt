@@ -1,0 +1,75 @@
+static/media/myphoto.6881c8a7.png
+static/media/menaraTravel.6d56f2a2.png
+static/media/modernui.0cedabd5.png
+static/media/soundTrap.2e3cd1c8.png
+static/media/cardsWave.c2600633.svg
+static/media/menaraTravel-mobile.7034cdb8.png
+static/media/modernui-mobile.a2f8eb81.png
+static/media/soundtrap-mobile.1dfded59.png
+static/media/covidtracker.7f7eecc3.png
+static/media/dolla.1e580164.png
+static/media/phoneFrame.0702357f.png
+static/media/covidtracker-mobile.af2e88b0.png
+static/media/dolla-mobile.82a50081.png
+use strict
+/portfolio
+/about
+/contact
+hero-text my-container
+Abderrahim El khaldi
+Hi I'm 
+ I'm a Frontend developer.
+My name is Abderrahim El Khaldi. I create mobile friendly websites using HTML,CSS,JavaScript and React. Also I build Wordpress and WooCommerce stores.
+View Previous Work
+Convert website design to pixel perfect HTML and CSS pages or React components
+I create SPAs and efficiently manage components data using Context or Redux
+Wordpress and Woocommerce
+Build SEO friendly Wordpress and WooCommerce stores and websites
+project-info mx-md-2
+noopener noreferrer
+Learn More
+project-preview  mx-md-2
+phone frame
+Menara Travels
+Travel agencies provide conveyance, accommodation and entertainment for individuals and groups scheduling trips, so I created frontend side for travel agency website using React, React router, HTML and CSS
+Sound Trap
+I Created clone landing page for SoundTrap website using HTML CSS flexbox grid and JavaScript, this landing page is compatible for all types of devices and screens
+Storage App
+Online storage applications are a good solution for companies to store and share data, in this project I converted the main page of storage app to an actual react application, I used React and bootstrap for this project.
+projects my-container
+Featured works.
+View more
+hero portfolio-hero
+View projects
+Covid Tracker
+Wildfires Map
+In this project, I created a Wildfire map for tracking wildfires around the world using Google Maps and NASA API
+Dolla Website
+To increase my coding skills, I built a responsive banking landing page using HTML CSS and Bootstrap.
+projects  my-container
+About me
+about my-container
+Here's my story
+My main experience is frontend development, but I also have passion for backend development using Laravel and node, I believe having experience in backend also make me better frontend developer.
+Get in touch
+contact-page my-container
+Send a general message or details of a project you'd like me to be a part of, and I'll get back to you as soon as possible.
+Your Name
+Your Website
+General Message
+Send Message
+About Me
+Email :
+mailto:pro.elkhaldi@gmail.com
+pro.elkhaldi@gmail.com
+Tel : 
+tel:+212613501230
++212 6 13 50 12 30
+GitHub :
+footer-content  my-container
+Follow to see projects source code and more.
+Let's connect on LinkedIn
+Visit my YouTube channel
+Learn more about me 
+View Abde's previous work
+Send a general message
