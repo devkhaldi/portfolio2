@@ -13,11 +13,21 @@ import { cn } from "@/lib/utils";
 import { useLanguage } from "@/providers/LanguageProvider";
 import { Language } from "@/data/translations";
 
+import { useSmoothScroll } from "@/components/providers/SmoothScrollProvider";
+
 export function Portfolio() {
     const { t, language } = useLanguage();
     const [activeFilter, setActiveFilter] = React.useState("all");
+    const lenis = useSmoothScroll();
 
     const isRTL = language === "ar";
+
+    const handleAboutClick = (e: React.MouseEvent) => {
+        if (lenis) {
+            e.preventDefault();
+            lenis.scrollTo("#about", { offset: -50, duration: 1.5 });
+        }
+    };
 
     return (
         <section id="portfolio" className="py-24 relative overflow-hidden bg-secondary/10 dark:bg-secondary/5">
@@ -117,7 +127,7 @@ export function Portfolio() {
                 {/* Simplified CTA */}
                 <div className="flex justify-center mt-20">
                     <Button variant="outline" size="lg" className="rounded-full px-12 text-lg font-black group overflow-hidden relative" asChild>
-                        <Link href="#about">
+                        <Link href="#about" onClick={handleAboutClick}>
                         <span className="relative z-10 flex items-center gap-2">
                             {t.navbar.about} <ChevronRight className={cn("h-5 w-5 group-hover:translate-x-1 transition-transform", isRTL && "rotate-180")} />
                         </span>

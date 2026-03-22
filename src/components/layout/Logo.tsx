@@ -110,12 +110,12 @@ export const Logo = ({ scrolled }: { scrolled: boolean }) => {
                 </motion.span>
                 <motion.span
                     animate={{
-                        opacity: scrolled ? 0.7 : 1,
+                        opacity: scrolled ? 0.8 : 1,
                         x: scrolled ? 1 : 0,
                     }}
-                    className="text-[9px] font-bold tracking-[0.3em] uppercase text-primary mt-1"
+                    className="text-[10px] font-black tracking-[0.4em] uppercase text-primary/80 mt-1"
                 >
-                    Design & Dev
+                    Premium Solutions
                 </motion.span>
             </div>
         </div>

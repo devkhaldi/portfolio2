@@ -24,22 +24,41 @@ export const translations = {
             },
         },
         services: {
-            badge: "My Services",
-            title: "What I Offer",
-            items: {
-                web: {
-                    title: "Bespoke Web Development",
-                    desc: "Crafting high-performance, responsive websites with a focus on speed, SEO, and flawless user interaction.",
+            badge: "Premium Agency Solutions",
+            title: "Your High-Performance Website",
+            pricing: {
+                starter: {
+                    name: "Starter",
+                    price: "39",
+                    originalPrice: "99",
+                    discount: "60%",
+                    note: "Limited Time Offer",
+                    features: ["3 Pages Design", "Mobile-First Layout", "Speed Optimized", "Basic SEO Setup", "Standard SSL Security", "Support (Email)"],
+                    cta: "Get Started Now",
+                    whatsappMsg: "Hi Abderrahim! I'm interested in the *Starter Website* plan ($39/mo). Can we discuss the setup?",
                 },
-                ecommerce: {
-                    title: "Scalable Application Design",
-                    desc: "Building complex Single Page Applications (SPAs) with robust state management and seamless data flow.",
+                professional: {
+                    name: "Standard",
+                    price: "59",
+                    originalPrice: "179",
+                    discount: "67%",
+                    note: "Most Popular choice",
+                    features: ["6 Premium Pages", "Google Maps & Contact Forms", "Social Media Integration", "Premium Hosting Config", "Advanced SEO Optimization", "Priority Support (WhatsApp)"],
+                    cta: "Get Standard Site",
+                    whatsappMsg: "Hi Abderrahim! I'd like to get started with the *Standard Website* plan ($59/mo). Can you help me set it up?",
                 },
-                nocode: {
-                    title: "Strategic CMS Solutions",
-                    desc: "Developing powerful, SEO-optimized WordPress and WooCommerce ecosystems tailored to your business growth.",
+                business: {
+                    name: "Business Elite",
+                    price: "149",
+                    originalPrice: "399",
+                    discount: "63%",
+                    note: "Best for Agencies",
+                    features: ["10+ Custom Pages", "Full E-commerce Setup", "Payment Gateway Integration", "Stunning Custom Animations", "Training Session (1hr)", "24/7 VIP Dedicated Support"],
+                    cta: "Get Elite Solution",
+                    whatsappMsg: "Hi Abderrahim! I want the *Business Elite Website* plan ($149/mo). Let's discuss the project requirements.",
                 },
             },
+            monthly: "per month",
             techStack: "My Technology Stack",
         },
         portfolio: {
@@ -145,22 +164,41 @@ export const translations = {
             },
         },
         services: {
-            badge: "خدماتي",
-            title: "ماذا أقدم",
-            items: {
-                web: {
-                    title: "تطوير ويب مخصّص",
-                    desc: "تصميم وتطوير مواقع ويب سريعة الاستجابة وعالية الأداء مع التركيز على السرعة، وتحسين محركات البحث، وتفاعل مستخدم مثالي.",
+            badge: "حلول الوكالات المتميزة",
+            title: "موقعك الإلكتروني عالي الأداء",
+            pricing: {
+                starter: {
+                    name: "الباقة الأساسية",
+                    price: "39",
+                    originalPrice: "99",
+                    discount: "خصم 60%",
+                    note: "عرض لفترة محدودة",
+                    features: ["تصميم 3 صفحات", "تخطيط للهاتف أولاً", "تحسين فائق للسرعة", "تجهيز السيو الأساسي", "أمان SSL قياسي", "دعم عبر البريد"],
+                    cta: "ابدأ الآن",
+                    whatsappMsg: "مرحباً عبد الرحيم! أنا مهتم بخطة *الموقع الأساسي* (39 دولار شهرياً). هل يمكننا مناقشة الإعداد؟",
                 },
-                ecommerce: {
-                    title: "تطبيقات الصفحة الواحدة",
-                    desc: "بناء تطبيقات الصفحة الواحدة (SPA) المعقدة مع إدارة قوية للبيانات وتدفق سلس للمعلومات.",
+                professional: {
+                    name: "الباقة القياسية",
+                    price: "59",
+                    originalPrice: "179",
+                    discount: "خصم 67%",
+                    note: "الخيار الأكثر شهرة",
+                    features: ["6 صفحات احترافية", "خرائط جوجل ونماذج الاتصال", "ربط مواقع التواصل", "إعداد استضافة مميزة", "تحسين سيو متقدم", "دعم أولوية (واتساب)"],
+                    cta: "ابدأ كـ محترف",
+                    whatsappMsg: "مرحباً عبد الرحيم! أود البدء بخطة *الموقع القياسي* (59 دولار شهرياً). هل يمكنك مساعدتي؟",
                 },
-                nocode: {
-                    title: "حلول إدارة المحتوى الإستراتيجية",
-                    desc: "تطوير أنظمة ووردبريس وووكومرس قوية ومحسنة لمحركات البحث، مصممة خصيصاً لنمو أعمالك.",
+                business: {
+                    name: "باقة النخبة",
+                    price: "149",
+                    originalPrice: "399",
+                    discount: "خصم 63%",
+                    note: "الأفضل للشركات",
+                    features: ["10+ صفحات مخصصة", "تجهيز تجارة إلكترونية كاملة", "ربط وبوابة دفع", "أنيميشن مخصص مذهل", "جلسة تدريبية (ساعة)", "دعم VIP مخصص 24/7"],
+                    cta: "احصل على حل النخبة",
+                    whatsappMsg: "مرحباً عبد الرحيم! أريد خطة *موقع النخبة للأعمال* (149 دولار شهرياً). دعنا نناقش متطلبات المشروع.",
                 },
             },
+            monthly: "شهرياً",
             techStack: "ترسانتي التقنية",
         },
         portfolio: {

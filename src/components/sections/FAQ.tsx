@@ -20,8 +20,20 @@ export function FAQ() {
 
             <div className="container mx-auto px-4 relative z-10">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                    {/* Left Column: FAQ Content */}
-                    <div className="order-2 lg:order-1">
+                    {/* Left Column: Animated Illustration (Now on the left) */}
+                    <div className="order-1 lg:order-1">
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.8 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            viewport={{ once: true }}
+                            transition={{ type: "spring", stiffness: 100, damping: 20 }}
+                        >
+                            <FAQIllustration />
+                        </motion.div>
+                    </div>
+
+                    {/* Right Column: FAQ Content (Now on the right) */}
+                    <div className="order-2 lg:order-2">
                         <motion.div
                             initial={{ opacity: 0, x: isRTL ? 20 : -20 }}
                             whileInView={{ opacity: 1, x: 0 }}
@@ -90,18 +102,6 @@ export function FAQ() {
                                 </motion.div>
                             ))}
                         </div>
-                    </div>
-
-                    {/* Right Column: Animated Illustration */}
-                    <div className="order-1 lg:order-2">
-                        <motion.div
-                            initial={{ opacity: 0, scale: 0.8 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            viewport={{ once: true }}
-                            transition={{ type: "spring", stiffness: 100, damping: 20 }}
-                        >
-                            <FAQIllustration />
-                        </motion.div>
                     </div>
                 </div>
             </div>

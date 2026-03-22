@@ -12,19 +12,24 @@ import { Contact } from "@/components/sections/Contact";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { useEffect } from "react";
 
+import { useSmoothScroll } from "@/components/providers/SmoothScrollProvider";
+
 export default function Home() {
-  // Handle initial load with a clean path (e.g., /contact)
+  const lenis = useSmoothScroll();
+
   useEffect(() => {
-    const path = window.location.pathname.substring(1); // removes leading slash
-    if (['home', 'services', 'portfolio', 'about', 'faq', 'contact'].includes(path)) {
+    // Handle initial load with a hash (e.g., /#faq) or path (e.g., /faq being redirected)
+    const hash = window.location.hash;
+    const path = window.location.pathname.substring(1).split('/')[0];
+    
+    const target = hash ? hash : (['home', 'services', 'portfolio', 'about', 'faq', 'contact'].includes(path) ? `#${path}` : null);
+    
+    if (target && lenis) {
       setTimeout(() => {
-        const element = document.getElementById(path);
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
-        }
-      }, 500); // Wait for components to mount
+        lenis.scrollTo(target, { offset: -50, duration: 2 });
+      }, 800);
     }
-  }, []);
+  }, [lenis]);
 
   return (
     <main className="flex min-h-screen flex-col">
@@ -34,8 +39,7 @@ export default function Home() {
       <Portfolio />
       <About />
       <FAQ />
-      {/* <Testimonials /> */}
-      {/* <Contact /> */}
+      <Contact />
       <WhatsAppButton />
       <Footer />
     </main>

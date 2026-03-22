@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { Github, Linkedin, Youtube, Mail, Phone, MapPin, MessageCircle } from "lucide-react";
 import { useLanguage } from "@/providers/LanguageProvider";
 import { cn } from "@/lib/utils";
+import { Logo } from "@/components/layout/Logo";
 
 export function Footer() {
     const { t, language } = useLanguage();
@@ -22,12 +23,8 @@ export function Footer() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
                     {/* Brand */}
                     <div className="space-y-6">
-                        <Link href="/" className="group inline-block">
-                            <motion.div
-                                className="text-4xl font-black bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-cyan-500 to-purple-500 bg-[length:200%_auto] tracking-tighter"
-                            >
-                                Khaldi
-                            </motion.div>
+                        <Link href="/" className="group inline-block scale-125 origin-left">
+                            <Logo scrolled={false} />
                         </Link>
                         <p className="text-muted-foreground text-base leading-relaxed max-w-xs">
                             {t.hero.description}
@@ -51,11 +48,11 @@ export function Footer() {
                     <div className={cn(isRTL && "text-right")}>
                         <h3 className="font-bold text-lg mb-6">{t.footer.expertise}</h3>
                         <ul className="space-y-3 text-base text-muted-foreground">
-                            <li className="flex items-center gap-2"><span className="w-1 h-1 rounded-full bg-border" /> {t.services.items.web.title}</li>
-                            <li className="flex items-center gap-2"><span className="w-1 h-1 rounded-full bg-border" /> {t.services.items.ecommerce.title}</li>
+                            <li className="flex items-center gap-2"><span className="w-1 h-1 rounded-full bg-border" /> {t.services.pricing.starter.name}</li>
+                            <li className="flex items-center gap-2"><span className="w-1 h-1 rounded-full bg-border" /> {t.services.pricing.professional.name}</li>
+                            <li className="flex items-center gap-2"><span className="w-1 h-1 rounded-full bg-border" /> {t.services.pricing.business.name}</li>
                             <li className="flex items-center gap-2"><span className="w-1 h-1 rounded-full bg-border" /> Shopify & Wix</li>
                             <li className="flex items-center gap-2"><span className="w-1 h-1 rounded-full bg-border" /> SEO Strategy</li>
-                            <li className="flex items-center gap-2"><span className="w-1 h-1 rounded-full bg-border" /> UI/UX Design</li>
                         </ul>
                     </div>
 
