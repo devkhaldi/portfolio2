@@ -54,7 +54,7 @@ export function Services() {
 
     const handleWhatsAppRedirect = (message: string) => {
         const encodedMsg = encodeURIComponent(message);
-        window.open(`https://wa.me/212708772806?text=${encodedMsg}`, "_blank");
+        window.open(`https://wa.me/12134019038?text=${encodedMsg}`, "_blank");
     };
 
     return (
@@ -92,13 +92,13 @@ export function Services() {
                             className="flex"
                         >
                             <Card className={cn(
-                                "relative flex flex-col w-full rounded-[2.5rem] border-white/10 bg-secondary/10 backdrop-blur-xl overflow-hidden transition-all duration-500 group",
-                                tier.popular && "border-primary/40 bg-primary/5 ring-1 ring-primary/20 shadow-2xl scale-105 z-20",
-                                !tier.popular && "hover:border-white/30 hover:bg-secondary/20 hover:-translate-y-2"
+                                "relative flex flex-col w-full rounded-[2.5rem] border-white/5 bg-background/40 backdrop-blur-2xl overflow-hidden transition-all duration-500 group shadow-[inset_0_1px_1px_rgba(255,255,255,0.05)]",
+                                tier.popular && "border-primary/30 bg-primary/5 ring-1 ring-primary/20 shadow-[0_0_40px_-10px_rgba(139,92,246,0.3)] scale-105 z-20",
+                                !tier.popular && "hover:border-white/20 hover:bg-white/[0.02] hover:-translate-y-4 hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.5)]"
                             )}>
                                 {tier.popular && (
                                     <div className="absolute top-6 right-8">
-                                        <span className="bg-primary text-white text-[10px] font-black uppercase tracking-widest px-4 py-1.5 rounded-full shadow-lg">
+                                        <span className="bg-primary text-white text-[10px] font-black uppercase tracking-widest px-4 py-1.5 rounded-full shadow-[0_0_20px_rgba(139,92,246,0.5)] animate-pulse">
                                             {tier.note}
                                         </span>
                                     </div>
@@ -107,10 +107,10 @@ export function Services() {
                                 <div className="p-10 flex-1 flex flex-col">
                                     <div className="mb-10">
                                         <div className={cn(
-                                            "w-14 h-14 rounded-2xl flex items-center justify-center mb-8 bg-gradient-to-br transition-all duration-500 group-hover:scale-110 group-hover:rotate-6",
-                                            tier.color
+                                            "w-16 h-16 rounded-[1.25rem] flex items-center justify-center mb-8 bg-gradient-to-br transition-all duration-500 group-hover:scale-110 group-hover:rotate-6 shadow-lg",
+                                            tier.color, tier.shadow
                                         )}>
-                                            <tier.icon className="h-7 w-7 text-white" />
+                                            <tier.icon className="h-8 w-8 text-white drop-shadow-md" />
                                         </div>
                                         <h3 className="text-2xl font-black tracking-tight mb-2">{tier.name}</h3>
                                         <p className="text-muted-foreground text-xs font-bold uppercase tracking-widest">{tier.note && !tier.popular ? tier.note : "Standard Plan"}</p>
@@ -118,8 +118,8 @@ export function Services() {
 
                                     <div className="mb-10 flex items-baseline gap-2">
                                         <span className={cn(
-                                            "text-6xl font-black tracking-tighter",
-                                            tier.highlight ? "text-primary" : "text-foreground"
+                                            "text-6xl font-black tracking-tighter bg-clip-text text-transparent bg-gradient-to-b transition-all duration-500",
+                                            tier.highlight ? "from-primary to-cyan-500" : "from-foreground to-foreground/60"
                                         )}>
                                             ${tier.price}
                                         </span>
@@ -136,11 +136,14 @@ export function Services() {
                                         </div>
                                     </div>
 
-                                    <ul className="space-y-4 mb-10 flex-1">
+                                    <ul className="space-y-4 mb-10 flex-1 relative z-10">
                                         {tier.features.map((feature, fIndex) => (
-                                            <li key={fIndex} className="flex items-center gap-3 text-sm font-bold text-foreground/80 group/item">
-                                                <div className="flex-shrink-0 w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center group-hover/item:bg-primary/20 transition-colors">
-                                                    <Check className="h-3.5 w-3.5 text-primary" />
+                                            <li key={fIndex} className="flex items-center gap-3 text-sm font-medium text-foreground/80 group/item transition-all duration-300 hover:text-foreground hover:translate-x-1">
+                                                <div className={cn(
+                                                    "flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center transition-all duration-500",
+                                                    tier.popular ? "bg-primary text-white shadow-[0_0_15px_rgba(139,92,246,0.3)] group-hover/item:scale-110" : "bg-primary/10 text-primary group-hover/item:bg-primary/20"
+                                                )}>
+                                                    <Check className="h-3.5 w-3.5" />
                                                 </div>
                                                 {feature}
                                             </li>
@@ -162,9 +165,13 @@ export function Services() {
                                     </Button>
                                 </div>
 
-                                {/* Bottom Glow */}
+                                {/* Bottom Glow & Hover Overlay */}
                                 <div className={cn(
-                                    "absolute bottom-0 left-0 w-full h-1 opacity-20 bg-gradient-to-r",
+                                    "absolute bottom-0 left-0 w-full h-1.5 opacity-20 bg-gradient-to-r transition-all duration-500 group-hover:opacity-100 group-hover:h-3",
+                                    tier.color
+                                )} />
+                                <div className={cn(
+                                    "absolute inset-0 opacity-0 group-hover:opacity-[0.03] transition-opacity duration-700 bg-gradient-to-br pointer-events-none",
                                     tier.color
                                 )} />
                             </Card>

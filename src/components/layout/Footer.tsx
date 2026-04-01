@@ -64,21 +64,19 @@ export function Footer() {
                                 <div className="p-2 rounded-lg bg-secondary/50 group-hover:bg-primary/10 transition-colors">
                                     <Mail className="h-4 w-4 text-primary" />
                                 </div>
-                                <span className="text-sm">pro.elkhaldi@gmail.com</span>
+                                <span className="text-sm">info@khalditech.com</span>
                             </li>
                             <li className={cn("flex items-center gap-3 group", isRTL && "flex-row-reverse")}>
                                 <div className="p-2 rounded-lg bg-secondary/50 group-hover:bg-primary/10 transition-colors">
                                     <Phone className="h-4 w-4 text-primary" />
                                 </div>
-                                <span className="text-sm">+212 708 772 806</span>
+                                <span className="text-sm">+1 213 401 9038</span>
                             </li>
                         </ul>
                         {/* Social Icons */}
                         <div className={cn("flex gap-3", isRTL && "flex-row-reverse")}>
                             {[
-                                { icon: Github, href: "https://github.com/devkhaldi", label: "GitHub" },
-                                { icon: Linkedin, href: "https://www.linkedin.com/in/elkhaldi/", label: "LinkedIn" },
-                                { icon: MessageCircle, href: "https://wa.me/212708772806?text=Hello%20Abderrahim!%20I%20visited%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project%20with%20you.", label: "WhatsApp" }
+                                { icon: MessageCircle, href: "https://wa.me/12134019038?text=Hello%20Khaldi%20Tech!%20I%20would%20like%20to%20discuss%20a%20project%20with%20you.", label: "WhatsApp" }
                             ].map((social, i) => (
                                 <Link
                                     key={i}
@@ -96,7 +94,7 @@ export function Footer() {
                 </div>
 
                 <div className="border-t border-border/50 pt-8 flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-muted-foreground/60">
-                    <p>© {new Date().getFullYear()} Khaldi. {t.footer.rights}</p>
+                    <p>© {new Date().getFullYear()} Khaldi Tech. {t.footer.rights}</p>
                     <div className="flex gap-10">
                         <Link href="#" className="hover:text-primary transition-colors">{t.footer.privacy}</Link>
                         <Link href="#" className="hover:text-primary transition-colors">{t.footer.terms}</Link>

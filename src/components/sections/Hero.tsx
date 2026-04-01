@@ -78,32 +78,32 @@ export function Hero() {
                             {language === "en" ? (
                                 <>
                                     <span className="whitespace-nowrap inline-flex items-center gap-2">
-                                        Hello , I'm Khaldi.
+                                        Welcome to Khaldi Tech.
                                         <motion.span
                                             animate={{ rotate: [0, 15, -15, 0] }}
                                             transition={{ duration: 1.5, repeat: Infinity, repeatDelay: 3 }}
                                             style={{ display: "inline-block", originX: 0.7, originY: 0.7 }}
                                         >
-                                            👋
+                                            🚀
                                         </motion.span>
                                     </span>
                                     <br />
-                                    I'm a Full Stack Developer.
+                                    We are a Digital Agency.
                                 </>
                             ) : (
                                 <>
                                     <span className="whitespace-nowrap inline-flex items-center gap-2">
-                                        مرحباً، أنا خالدي.
+                                        مرحباً بك في خالدي تيك.
                                         <motion.span
                                             animate={{ rotate: [0, -15, 15, 0] }}
                                             transition={{ duration: 1.5, repeat: Infinity, repeatDelay: 3 }}
                                             style={{ display: "inline-block", originX: 0.7, originY: 0.7 }}
                                         >
-                                            👋
+                                            🚀
                                         </motion.span>
                                     </span>
                                     <br />
-                                    أنا مطور ويب.
+                                    وكالة رقمية متكاملة.
                                 </>
                             )}
                         </h1>
@@ -123,7 +123,7 @@ export function Hero() {
                             transition={{ duration: 0.5, delay: 0.4 }}
                         >
                             <Button size="lg" className="rounded-full bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 shadow-lg shadow-purple-500/25" asChild>
-                                <Link href="https://wa.me/212708772806?text=Hello%20Abderrahim!%20I%20visited%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project%20with%20you." target="_blank">
+                                <Link href="https://wa.me/12134019038?text=Hello%20Khaldi%20Tech!%20I%20visited%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project%20with%20you." target="_blank">
                                     {t.hero.ctaContact} <ArrowRight className={cn("ms-2 h-4 w-4", isRTL && "rotate-180")} />
                                 </Link>
                             </Button>
@@ -139,24 +139,8 @@ export function Hero() {
                         </motion.div>
                     </div>
 
-                    {/* Staggered Socials */}
-                    <div className="flex items-center gap-6 pt-8 text-muted-foreground">
-                        {[
-                            { icon: Github, href: "https://github.com/devkhaldi", delay: 0.6 },
-                            { icon: Linkedin, href: "https://www.linkedin.com/in/elkhaldi/", delay: 0.7 }
-                        ].map((social, i) => (
-                            <motion.div
-                                key={i}
-                                initial={{ opacity: 0, scale: 0 }}
-                                animate={{ opacity: 1, scale: 1 }}
-                                transition={{ type: "spring", stiffness: 260, damping: 20, delay: social.delay }}
-                            >
-                                <Link href={social.href} className="hover:text-primary transition-colors flex items-center justify-center p-2 rounded-xl bg-secondary/30 border border-transparent hover:border-primary/20 hover:bg-secondary/50">
-                                    <social.icon className="h-6 w-6" />
-                                </Link>
-                            </motion.div>
-                        ))}
-                    </div>
+                    {/* Staggered Socials removed to fit agency perspective without individual accounts */}
+                    <div className="pt-8"></div>
                 </div>
 
                 {/* Right Column: Interactive Illustration & Skill Cards */}

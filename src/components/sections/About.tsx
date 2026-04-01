@@ -83,14 +83,34 @@ export function About() {
 
                         {/* Image Container with Glow */}
                         <div className="relative w-full h-full rounded-full p-2 bg-gradient-to-br from-primary/20 via-transparent to-cyan-500/20 shadow-2xl">
-                            <div className="relative w-full h-full rounded-full border-4 border-background overflow-hidden bg-secondary/30 backdrop-blur-xl group cursor-crosshair">
-                                    <Image
-                                        src="/img/myphoto2.jpeg"
-                                    alt="Khadi - Web Developer"
-                                    fill
-                                    className="object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
-                                    priority
-                                />
+                            <div className="relative w-full h-full rounded-full border-4 border-background overflow-hidden bg-secondary/30 backdrop-blur-xl group cursor-crosshair flex items-center justify-center">
+                                <svg viewBox="0 0 200 200" className="w-full h-full p-4 drop-shadow-2xl" xmlns="http://www.w3.org/2000/svg">
+                                    <defs>
+                                        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" stopColor="#8b5cf6" stopOpacity="0.8" />
+                                            <stop offset="100%" stopColor="#06b6d4" stopOpacity="0.8" />
+                                        </linearGradient>
+                                        <linearGradient id="grad2" x1="100%" y1="0%" x2="0%" y2="100%">
+                                            <stop offset="0%" stopColor="#ec4899" stopOpacity="0.8" />
+                                            <stop offset="100%" stopColor="#8b5cf6" stopOpacity="0.8" />
+                                        </linearGradient>
+                                    </defs>
+                                    <motion.circle cx="100" cy="100" r="35" fill="url(#grad1)" animate={{ scale: [1, 1.05, 1], opacity: [0.8, 1, 0.8] }} transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }} />
+                                    <motion.g animate={{ rotate: 360 }} transition={{ duration: 20, repeat: Infinity, ease: "linear" }} style={{ transformOrigin: "100px 100px" }}>
+                                        <circle cx="100" cy="30" r="15" fill="url(#grad2)" />
+                                        <path d="M100 45 L100 65" stroke="currentColor" strokeWidth="2" strokeOpacity="0.2" strokeDasharray="4 4" />
+                                    </motion.g>
+                                    <motion.g animate={{ rotate: -360 }} transition={{ duration: 15, repeat: Infinity, ease: "linear" }} style={{ transformOrigin: "100px 100px" }}>
+                                        <circle cx="100" cy="170" r="10" fill="#06b6d4" opacity="0.8" />
+                                        <path d="M100 160 L100 135" stroke="currentColor" strokeWidth="2" strokeOpacity="0.2" strokeDasharray="4 4" />
+                                    </motion.g>
+                                    <motion.g animate={{ rotate: 360 }} transition={{ duration: 25, repeat: Infinity, ease: "linear" }} style={{ transformOrigin: "100px 100px" }}>
+                                        <circle cx="30" cy="100" r="20" fill="url(#grad1)" opacity="0.6" />
+                                        <path d="M50 100 L65 100" stroke="currentColor" strokeWidth="2" strokeOpacity="0.2" strokeDasharray="4 4" />
+                                    </motion.g>
+                                    <circle cx="100" cy="100" r="70" fill="none" stroke="currentColor" strokeWidth="1" strokeOpacity="0.1" strokeDasharray="4 4" />
+                                    <circle cx="100" cy="100" r="90" fill="none" stroke="currentColor" strokeWidth="1" strokeOpacity="0.1" />
+                                </svg>
                                 <div className="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                             </div>
                         </div>
@@ -120,7 +140,7 @@ export function About() {
                         >
                             <Zap className="h-5 w-5 text-cyan-400" />
                             <span className="font-black text-sm tracking-tight text-foreground">
-                                {language === "en" ? "Full Stack Dev" : "مطور ويب"}
+                                {language === "en" ? "Digital Agency" : "وكالة رقمية"}
                             </span>
                         </motion.div>
 
@@ -149,7 +169,7 @@ export function About() {
                             viewport={{ once: true }}
                             className="inline-block px-4 py-1.5 rounded-full border border-pink-500/30 bg-pink-500/10 text-pink-500 text-xs font-bold tracking-widest uppercase mb-4"
                         >
-                            {language === "en" ? "THE ARCHITECT" : "المعماري"}
+                            {language === "en" ? "THE AGENCY" : "الوكالة"}
                         </motion.div>
                         <h2 className="text-4xl md:text-5xl font-black tracking-tight leading-tight">
                             {t.about.title} <br />
@@ -162,17 +182,17 @@ export function About() {
                             <p>
                                 {language === "en" ? (
                                     <>
-                                        Hey, I&apos;m <span className="text-foreground font-bold">Abderrahim El Khaldi</span> — a full-stack developer who obsesses over building digital products that are fast, elegant, and built to last. My expertise spans
+                                        Welcome, we are <span className="text-foreground font-bold">Khaldi Tech</span> — a digital agency that obsesses over building digital products that are fast, elegant, and built to last. Our expertise spans
                                         <span className="text-primary font-semibold"> Next.js</span>,
                                         <span className="text-primary font-semibold"> React</span>, and
                                         <span className="text-primary font-semibold"> Shopify</span>, turning complex challenges into smooth, impactful user experiences.
                                     </>
                                 ) : (
                                     <>
-                                        أهلاً، أنا <span className="text-foreground font-bold">عبد الرحيم الخالدي</span> — مطور ويب متكامل يبني منتجات رقمية سريعة وأنيقة وقابلة للتوسع. خبرتي تشمل
+                                        أهلاً، نحن <span className="text-foreground font-bold">خالدي تيك</span> — وكالة رقمية تبني منتجات رقمية سريعة وأنيقة وقابلة للتوسع. خبرتنا تشمل
                                         <span className="text-primary font-semibold"> Next.js</span> و
                                         <span className="text-primary font-semibold"> React</span> و
-                                        <span className="text-primary font-semibold"> Shopify</span>، أحوّل التحديات المعقدة إلى تجارب مستخدم سلسة ومؤثرة.
+                                        <span className="text-primary font-semibold"> Shopify</span>، نحول التحديات المعقدة إلى تجارب مستخدم سلسة ومؤثرة.
                                     </>
                                 )}
                             </p>

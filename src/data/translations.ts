@@ -11,12 +11,12 @@ export const translations = {
             contact: "Contact",
         },
         hero: {
-            role: "Full-Stack Web Architect",
-            title: "Hi, I'm",
-            titleAccent: "Abderrahim",
-            description: "I'm Abderrahim El Khaldi — an architect of high-performance digital solutions. Specializing in Next.js, React, and premium E-commerce, I transform complex technical challenges into elegant, user-centric experiences that drive results.",
+            role: "Digital Agency",
+            title: "Welcome to",
+            titleAccent: "Khaldi Tech",
+            description: "We are Khaldi Tech — architects of high-performance digital solutions. Specializing in Next.js, React, and premium E-commerce, we transform complex technical challenges into elegant, user-centric experiences that drive results.",
             ctaContact: "Let's Work Together",
-            ctaProjects: "View My Projects",
+            ctaProjects: "View Our Projects",
             skills: {
                 react: "Modern Apps",
                 shopify: "Premium E-commerce",
@@ -29,40 +29,40 @@ export const translations = {
             pricing: {
                 starter: {
                     name: "Starter",
-                    price: "39",
+                    price: "59",
                     originalPrice: "99",
-                    discount: "60%",
-                    note: "Limited Time Offer",
-                    features: ["3 Pages Design", "Mobile-First Layout", "Speed Optimized", "Basic SEO Setup", "Standard SSL Security", "Support (Email)"],
+                    discount: "40%",
+                    note: "Essential Choice",
+                    features: ["Professional Spa Design", "Mobile-Friendly Layout", "Services & Pricing Menu", "Free .com Domain Name", "2-3 Monthly Edits", "Standard SSL Security", "Support (Email)"],
                     cta: "Get Started Now",
-                    whatsappMsg: "Hi Abderrahim! I'm interested in the *Starter Website* plan ($39/mo). Can we discuss the setup?",
+                    whatsappMsg: "Hi Khaldi Tech! I'm interested in the *Starter Website* plan for my spa ($59/mo). Can we discuss the setup?",
                 },
                 professional: {
                     name: "Standard",
-                    price: "59",
+                    price: "79",
                     originalPrice: "179",
-                    discount: "67%",
+                    discount: "55%",
                     note: "Most Popular choice",
-                    features: ["6 Premium Pages", "Google Maps & Contact Forms", "Social Media Integration", "Premium Hosting Config", "Advanced SEO Optimization", "Priority Support (WhatsApp)"],
+                    features: ["Premium Spa Website", "Online Booking System", "Staff & Therapist Profiles", "Free .com Domain Name", "6-7 Monthly Edits", "Google Maps & Contact Forms", "Priority Support (WhatsApp)"],
                     cta: "Get Standard Site",
-                    whatsappMsg: "Hi Abderrahim! I'd like to get started with the *Standard Website* plan ($59/mo). Can you help me set it up?",
+                    whatsappMsg: "Hi Khaldi Tech! I'd like to get started with the *Standard Website* plan ($79/mo). Can you help me set it up?",
                 },
                 business: {
                     name: "Business Elite",
-                    price: "149",
+                    price: "99",
                     originalPrice: "399",
-                    discount: "63%",
-                    note: "Best for Agencies",
-                    features: ["10+ Custom Pages", "Full E-commerce Setup", "Payment Gateway Integration", "Stunning Custom Animations", "Training Session (1hr)", "24/7 VIP Dedicated Support"],
+                    discount: "75%",
+                    note: "Best for Spas & Salons",
+                    features: ["Luxury Spa Identity", "Advanced Booking & Payments", "Client Management Dashboard", "Free .com Domain Name", "Unlimited Monthly Edits", "Gift Cards & Promotions", "24/7 VIP Dedicated Support"],
                     cta: "Get Elite Solution",
-                    whatsappMsg: "Hi Abderrahim! I want the *Business Elite Website* plan ($149/mo). Let's discuss the project requirements.",
+                    whatsappMsg: "Hi Khaldi Tech! I want the *Business Elite Website* plan ($99/mo). Let's discuss the project requirements.",
                 },
             },
             monthly: "per month",
-            techStack: "My Technology Stack",
+            techStack: "Our Technology Stack",
         },
         portfolio: {
-            badge: "My Work",
+            badge: "Our Work",
             title: "Recent Projects",
             filters: {
                 all: "All",
@@ -74,10 +74,10 @@ export const translations = {
             preview: "Preview",
         },
         about: {
-            badge: "The Architect",
+            badge: "The Agency",
             title: "Crafting Digital",
             titleAccent: "Experiences That Matter",
-            bio: "I'm Abderrahim El Khaldi — a Full-Stack Developer who turns complex ideas into fast, elegant, and scalable digital products. From pixel-perfect React interfaces to robust API architectures, I obsess over every layer of the stack. I believe great software isn't just functional — it's a craft that users can feel.",
+            bio: "We are Khaldi Tech — a digital agency that turns complex ideas into fast, elegant, and scalable digital products. From pixel-perfect React interfaces to robust API architectures, we obsess over every layer of the stack. We believe great software isn't just functional — it's a craft that users can feel.",
             stats: {
                 experience: "Years of Experience",
                 projects: "Completed Projects",
@@ -92,43 +92,43 @@ export const translations = {
             items: [
                 {
                     question: "What specific services do you offer?",
-                    answer: "I specialize in building high-performance digital solutions, including custom React/Next.js applications, premium Shopify & WooCommerce stores, and data-driven dashboards. I also provide SEO optimization and UI/UX consulting to ensure your product not only works but converts."
+                    answer: "We specialize in building high-performance digital solutions, including custom React/Next.js applications, premium Shopify & WooCommerce stores, and data-driven dashboards. We also provide SEO optimization and UI/UX consulting to ensure your product not only works but converts."
                 },
                 {
                     question: "Which technologies are in your core stack?",
-                    answer: "My primary stack includes Next.js, React, TypeScript, and Tailwind CSS for the frontend. For the backend and database, I rely on Node.js, MongoDB, Prisma, and PostgreSQL/Supabase. I'm also expert in Shopify Liquid and WordPress development."
+                    answer: "Our primary stack includes Next.js, React, TypeScript, and Tailwind CSS for the frontend. For the backend and database, we rely on Node.js, MongoDB, Prisma, and PostgreSQL/Supabase. We are also experts in Shopify Liquid and WordPress development."
                 },
                 {
                     question: "Can you redesign or improve my current website?",
-                    answer: "Absolutely. Many of my projects, like 'Lille Noire' and 'Menara Travels', involve taking existing concepts or legacy sites and transforming them into modern, responsive, and blazing-fast experiences that align with current web standards."
+                    answer: "Absolutely. Many of our projects, like 'Lille Noire' and 'Menara Travels', involve taking existing concepts or legacy sites and transforming them into modern, responsive, and blazing-fast experiences that align with current web standards."
                 },
                 {
                     question: "How do we start a project together?",
-                    answer: "The best way is to reach out via WhatsApp (+212 708 772 806) or email (pro.elkhaldi@gmail.com). We'll have a brief discovery call to discuss your goals, timeline, and budget, after which I'll provide a detailed technical proposal."
+                    answer: "The best way is to reach out via WhatsApp (+1 213 401 9038) or email (info@khalditech.com). We'll have a brief discovery call to discuss your goals, timeline, and budget, after which we'll provide a detailed technical proposal."
                 }
             ]
         },
         testimonials: {
             badge: "Testimonials",
-            title: "What my clients say",
-            description: "I take pride in building lasting relationships with my clients by delivering high-performance digital solutions that exceed expectations.",
+            title: "What our clients say",
+            description: "We take pride in building lasting relationships with our clients by delivering high-performance digital solutions that exceed expectations.",
         },
         contact: {
             badge: "Available for new projects",
             title: "Let's Build",
             titleAccent: "Something Great",
-            formTitle: "Send a general message or details of a project you'd like me to be a part of, and I'll get back to you as soon as possible.",
+            formTitle: "Send a general message or details of a project you'd like us to be a part of, and we'll get back to you as soon as possible.",
             btn: "Start a Conversation",
             success: {
                 title: "Message Sent",
-                desc: "I will get back to you within 24 hours.",
+                desc: "We will get back to you within 24 hours.",
                 btn: "Send Another",
             },
             form: {
                 name: { label: "Your Name", req: "Name required" },
                 email: { label: "Email Address", req: "Email required", inv: "Invalid email format" },
                 subject: { label: "Project Subject", req: "Subject required" },
-                message: { label: "How can I help you?", req: "Message required" },
+                message: { label: "How can we help you?", req: "Message required" },
             },
         },
         footer: {
@@ -144,19 +144,19 @@ export const translations = {
     ar: {
         navbar: {
             home: "الرئيسية",
-            services: "خدماتي",
-            portfolio: "أعمالي",
-            about: "عني",
+            services: "خدماتنا",
+            portfolio: "أعمالنا",
+            about: "عن الوكالة",
             faq: "الأسئلة",
             contact: "اتصل بي",
         },
         hero: {
-            role: "مهندس حلول الويب المتكاملة",
-            title: "مرحباً، أنا",
-            titleAccent: "عبد الرحيم",
-            description: "أنا عبد الرحيم الخالدي، متخصص في ابتكار حلول رقمية عالية الأداء. بفضل خبرتي العميقة في Next.js و React والتجارة الإلكترونية المتميزة، أقوم بتحويل المتطلبات المعقدة إلى تجارب مستخدم سلسة تحقق نتائج ملموسة.",
+            role: "وكالة رقمية متكاملة",
+            title: "مرحباً بك في",
+            titleAccent: "خالدي تيك",
+            description: "نحن خالدي تيك — وكالة متخصصة في ابتكار حلول رقمية عالية الأداء. بفضل خبرتنا العميقة في Next.js و React والتجارة الإلكترونية المتميزة، نقوم بتحويل المتطلبات المعقدة إلى تجارب مستخدم سلسة تحقق نتائج ملموسة.",
             ctaContact: "دعنا نعمل معاً",
-            ctaProjects: "مشاهدة مشاريعي",
+            ctaProjects: "مشاهدة مشاريعنا",
             skills: {
                 react: "تطبيقات حديثة",
                 shopify: "تجارة إلكترونية مميزة",
@@ -169,40 +169,40 @@ export const translations = {
             pricing: {
                 starter: {
                     name: "الباقة الأساسية",
-                    price: "39",
+                    price: "59",
                     originalPrice: "99",
-                    discount: "خصم 60%",
-                    note: "عرض لفترة محدودة",
-                    features: ["تصميم 3 صفحات", "تخطيط للهاتف أولاً", "تحسين فائق للسرعة", "تجهيز السيو الأساسي", "أمان SSL قياسي", "دعم عبر البريد"],
+                    discount: "خصم 40%",
+                    note: "الخيار الأساسي",
+                    features: ["تصميم احترافي للسبا", "متوافق مع الهواتف", "قائمة الخدمات والأسعار", "نطاق .com مجاني", "تعديلات 2-3 شهرية", "أمان SSL قياسي", "دعم عبر البريد"],
                     cta: "ابدأ الآن",
-                    whatsappMsg: "مرحباً عبد الرحيم! أنا مهتم بخطة *الموقع الأساسي* (39 دولار شهرياً). هل يمكننا مناقشة الإعداد؟",
+                    whatsappMsg: "مرحباً خالدي تيك! أنا مهتم بخطة *الموقع الأساسي* (59 دولار شهرياً). هل يمكننا مناقشة الإعداد؟",
                 },
                 professional: {
                     name: "الباقة القياسية",
-                    price: "59",
+                    price: "79",
                     originalPrice: "179",
-                    discount: "خصم 67%",
+                    discount: "خصم 55%",
                     note: "الخيار الأكثر شهرة",
-                    features: ["6 صفحات احترافية", "خرائط جوجل ونماذج الاتصال", "ربط مواقع التواصل", "إعداد استضافة مميزة", "تحسين سيو متقدم", "دعم أولوية (واتساب)"],
+                    features: ["موقع سبا متميز", "نظام حجز إلكتروني", "ملفات تعريف للموظفين", "نطاق .com مجاني", "تعديلات 6-7 شهرية", "خرائط جوجل ونماذج", "دعم أولوية (واتساب)"],
                     cta: "ابدأ كـ محترف",
-                    whatsappMsg: "مرحباً عبد الرحيم! أود البدء بخطة *الموقع القياسي* (59 دولار شهرياً). هل يمكنك مساعدتي؟",
+                    whatsappMsg: "مرحباً خالدي تيك! أود البدء بخطة *الموقع القياسي* (79 دولار شهرياً). هل يمكنكم مساعدتي؟",
                 },
                 business: {
                     name: "باقة النخبة",
-                    price: "149",
+                    price: "99",
                     originalPrice: "399",
-                    discount: "خصم 63%",
-                    note: "الأفضل للشركات",
-                    features: ["10+ صفحات مخصصة", "تجهيز تجارة إلكترونية كاملة", "ربط وبوابة دفع", "أنيميشن مخصص مذهل", "جلسة تدريبية (ساعة)", "دعم VIP مخصص 24/7"],
+                    discount: "خصم 75%",
+                    note: "الأفضل للسبا والصالونات",
+                    features: ["هوية سبا فاخرة", "حجز متقدم وعمليات دفع", "لوحة إدارة العملاء", "نطاق .com مجاني", "تعديلات غير محدودة شهرية", "بطاقات هدايا وعروض", "دعم VIP مخصص 24/7"],
                     cta: "احصل على حل النخبة",
-                    whatsappMsg: "مرحباً عبد الرحيم! أريد خطة *موقع النخبة للأعمال* (149 دولار شهرياً). دعنا نناقش متطلبات المشروع.",
+                    whatsappMsg: "مرحباً خالدي تيك! أريد خطة *موقع النخبة للأعمال* (99 دولار شهرياً). دعونا نناقش متطلبات المشروع.",
                 },
             },
             monthly: "شهرياً",
-            techStack: "ترسانتي التقنية",
+            techStack: "ترسانتنا التقنية",
         },
         portfolio: {
-            badge: "أعمالي",
+            badge: "أعمالنا",
             title: "أحدث المشاريع",
             filters: {
                 all: "الكل",
@@ -214,10 +214,10 @@ export const translations = {
             preview: "معاينة",
         },
         about: {
-            badge: "المعماري",
-            title: "أبني تجارب رقمية",
+            badge: "الوكالة",
+            title: "نبني تجارب رقمية",
             titleAccent: "تصنع الفارق",
-            bio: "أنا عبد الرحيم الخالدي — مطور ويب متكامل أحوّل الأفكار المعقدة إلى منتجات رقمية سريعة وأنيقة وقابلة للتوسع. من واجهات React المصنوعة بدقة حتى هندسة الواجهات البرمجية المتينة، أهتم بكل طبقة من طبقات التطوير. أؤمن بأن البرمجيات الرائعة ليست مجرد وظيفية — بل هي حرفة يشعر بها المستخدم.",
+            bio: "نحن خالدي تيك — وكالة رقمية تحوّل الأفكار المعقدة إلى منتجات رقمية سريعة وأنيقة وقابلة للتوسع. من واجهات React المصنوعة بدقة حتى هندسة الواجهات البرمجية المتينة، نهتم بكل طبقة من طبقات التطوير. نؤمن بأن البرمجيات الرائعة ليست مجرد وظيفية — بل هي حرفة يشعر بها المستخدم.",
             stats: {
                 experience: "سنوات الخبرة",
                 projects: "مشروع منجز",
@@ -231,44 +231,44 @@ export const translations = {
             titleAccent: "الأكثر شيوعاً",
             items: [
                 {
-                    question: "ما هي الخدمات المحددة التي تقدمها؟",
-                    answer: "أتخصص في بناء حلول رقمية عالية الأداء، بما في ذلك تطبيقات React/Next.js المخصصة، ومتاجر Shopify و WooCommerce المتميزة، ولوحات التحكم المدعومة بالبيانات. كما أقدم خدمات تحسين محركات البحث واستشارات UI/UX."
+                    question: "ما هي الخدمات المحددة التي تقدمونها؟",
+                    answer: "نتخصص في بناء حلول رقمية عالية الأداء، بما في ذلك تطبيقات React/Next.js المخصصة، ومتاجر Shopify و WooCommerce المتميزة، ولوحات التحكم المدعومة بالبيانات. كما نقدم خدمات تحسين محركات البحث واستشارات UI/UX."
                 },
                 {
-                    question: "ما هي التقنيات الأساسية التي تعتمد عليها؟",
-                    answer: "تتكون مجموعتي الأساسية من Next.js و React و TypeScript و Tailwind CSS للواجهات الأمامية. أما بالنسبة للخلفية وقواعد البيانات، فأعتمد على Node.js و MongoDB و Prisma و PostgreSQL/Supabase. كما أنني خبير في تطوير Shopify Liquid و WordPress."
+                    question: "ما هي التقنيات الأساسية التي تعتمدون عليها؟",
+                    answer: "تتكون مجموعتنا الأساسية من Next.js و React و TypeScript و Tailwind CSS للواجهات الأمامية. أما بالنسبة للخلفية وقواعد البيانات، فنعتمد على Node.js و MongoDB و Prisma و PostgreSQL/Supabase. كما أننا خبراء في تطوير Shopify Liquid و WordPress."
                 },
                 {
-                    question: "هل يمكنك إعادة تصميم أو تحسين موقعي الحالي؟",
-                    answer: "بالتأكيد. العديد من مشاريعي، مثل 'Lille Noire' و 'Menara Travels'، تتضمن أخذ مفاهيم موجودة أو مواقع قديمة وتحويلها إلى تجارب حديثة سريعة الاستجابة وفائقة السرعة تتوافق مع معايير الويب الحالية."
+                    question: "هل يمكنكم إعادة تصميم أو تحسين موقعي الحالي؟",
+                    answer: "بالتأكيد. العديد من مشاريعنا، مثل 'Lille Noire' و 'Menara Travels'، تتضمن أخذ مفاهيم موجودة أو مواقع قديمة وتحويلها إلى تجارب حديثة سريعة الاستجابة وفائقة السرعة تتوافق مع معايير الويب الحالية."
                 },
                 {
                     question: "كيف نبدأ مشروعاً معاً؟",
-                    answer: "أفضل طريقة هي التواصل عبر واتساب (+212 708 772 806) أو البريد الإلكتروني (pro.elkhaldi@gmail.com). سنقوم بإجراء مكالمة اكتشاف موجزة لمناقشة أهدافك والجدول الزمني والميزانية، وبعد ذلك سأرسل لك عرضاً تقنياً مفصلاً."
+                    answer: "أفضل طريقة هي التواصل عبر واتساب (+1 213 401 9038) أو البريد الإلكتروني (info@khalditech.com). سنقوم بإجراء مكالمة اكتشاف موجزة لمناقشة أهدافك والجدول الزمني والميزانية، وبعد ذلك سنرسل لك عرضاً تقنياً مفصلاً."
                 }
             ]
         },
         testimonials: {
             badge: "آراء العملاء",
             title: "ماذا يقول عملاؤنا",
-            description: "أفتخر ببناء علاقات طويلة الأمد مع عملائي من خلال تقديم حلول رقمية عالية الأداء تفوق التوقعات.",
+            description: "نفتخر ببناء علاقات طويلة الأمد مع عملائنا من خلال تقديم حلول رقمية عالية الأداء تفوق التوقعات.",
         },
         contact: {
-            badge: "متاح لمشاريع جديدة",
+            badge: "متاحون لمشاريع جديدة",
             title: "لنقم ببناء",
             titleAccent: "شيء عظيم",
-            formTitle: "أرسل رسالة عامة أو تفاصيل مشروع ترغب في أن أكون جزءًا منه، وسأرد عليك في أقرب وقت ممكن.",
+            formTitle: "أرسل رسالة عامة أو تفاصيل مشروع ترغب في أن نكون جزءًا منه، وسنرد عليك في أقرب وقت ممكن.",
             btn: "بدء المحادثة",
             success: {
                 title: "تم الإرسال بنجاح",
-                desc: "سأرد عليك خلال 24 ساعة.",
+                desc: "سنرد عليك خلال 24 ساعة.",
                 btn: "إرسال رسالة أخرى",
             },
             form: {
                 name: { label: "اسمك", req: "الاسم مطلوب" },
                 email: { label: "البريد الإلكتروني", req: "الايميل مطلوب", inv: "بريد غير صالح" },
                 subject: { label: "موضوع المشروع", req: "الموضوع مطلوب" },
-                message: { label: "كيف يمكنني مساعدتك؟", req: "الرسالة مطلوبة" },
+                message: { label: "كيف يمكننا مساعدتك؟", req: "الرسالة مطلوبة" },
             },
         },
         footer: {

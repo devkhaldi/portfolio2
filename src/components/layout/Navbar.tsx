@@ -165,15 +165,6 @@ export function Navbar() {
                     </div>
 
                     <div className="flex items-center gap-4 border-l border-white/10 pl-6">
-                        <Button
-                            variant="ghost"
-                            size="sm"
-                            onClick={toggleLanguage}
-                            className="text-[10px] font-black tracking-widest flex items-center gap-2 px-4 py-1.5 rounded-full bg-secondary/30 hover:bg-primary hover:text-white transition-all duration-300 min-w-[70px] uppercase border border-white/5"
-                        >
-                            <Globe className="h-3.5 w-3.5" />
-                            <span>{language}</span>
-                        </Button>
                         <ThemeToggle />
                         <Button 
                             variant="default" 
@@ -236,16 +227,8 @@ export function Navbar() {
                             <div className="h-px bg-white/10 my-4" />
                             
                             <div className="flex items-center justify-between gap-4">
-                                <Button
-                                    variant="ghost"
-                                    onClick={toggleLanguage}
-                                    className="flex-1 font-black text-xs uppercase tracking-widest h-12 bg-secondary/30 rounded-2xl"
-                                >
-                                    <Globe className="mr-2 h-4 w-4" />
-                                    {language === "en" ? "Arabic" : "English"}
-                                </Button>
                                 <Button 
-                                    className="flex-[2] font-black text-xs uppercase tracking-widest h-12 rounded-2xl cursor-pointer"
+                                    className="flex w-full font-black text-xs uppercase tracking-widest h-12 rounded-2xl cursor-pointer"
                                     onClick={() => handleNavClick("contact")}
                                 >
                                     {t.navbar.contact}

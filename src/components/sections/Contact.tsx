@@ -368,9 +368,9 @@ export function Contact() {
                                 {[...Array(15)].map((_, i) => (
                                     <motion.circle
                                         key={i}
-                                        cx={50 + Math.random() * 600}
-                                        cy={50 + Math.random() * 450}
-                                        r={1.5 + Math.random() * 2.5}
+                                        cx={50 + ((i * 137) % 600)}
+                                        cy={50 + ((i * 193) % 450)}
+                                        r={1.5 + ((i * 17) % 2.5)}
                                         fill="url(#eco-grad)"
                                         opacity="0.15"
                                         animate={!shouldReduceMotion ? {
@@ -378,7 +378,7 @@ export function Contact() {
                                             opacity: [0.05, 0.2, 0.05],
                                             x: [0, (i % 2 === 0 ? 15 : -15)]
                                         } : {}}
-                                        transition={{ duration: 5 + Math.random() * 5, repeat: Infinity, ease: "easeInOut" }}
+                                        transition={{ duration: 5 + ((i * 23) % 5), repeat: Infinity, ease: "easeInOut" }}
                                     />
                                 ))}
                             </svg>
