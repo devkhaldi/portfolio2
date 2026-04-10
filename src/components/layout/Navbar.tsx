@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import Link from "next/link";
-import { Menu, X, Globe } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ThemeToggle } from "@/components/layout/ThemeToggle";
 import { Logo } from "@/components/layout/Logo";
@@ -12,16 +12,11 @@ import { useSmoothScroll } from "@/components/providers/SmoothScrollProvider";
 import { useLanguage } from "@/providers/LanguageProvider";
 
 export function Navbar() {
-    const { t, language, setLanguage } = useLanguage();
+    const { t } = useLanguage();
     const [isOpen, setIsOpen] = React.useState(false);
     const [scrolled, setScrolled] = React.useState(false);
     const [activeSection, setActiveSection] = React.useState("home");
     const lenis = useSmoothScroll();
-
-    // For the bottom-of-navbar sliding indicator
-    const headerRef = React.useRef<HTMLElement>(null);
-    const itemRefsMap = React.useRef<Map<string, HTMLAnchorElement>>(new Map());
-    const [indicator, setIndicator] = React.useState({ left: 0, width: 0, ready: false });
 
     const navItems = React.useMemo(() => [
         { name: t.navbar.home, href: "home" },
@@ -30,22 +25,6 @@ export function Navbar() {
         { name: t.navbar.about, href: "about" },
         { name: t.navbar.faq, href: "faq" },
     ], [t]);
-
-    // Update indicator position whenever active section changes
-    const updateIndicator = React.useCallback((section: string) => {
-        const headerEl = headerRef.current;
-        const itemEl = itemRefsMap.current.get(section);
-        if (!headerEl || !itemEl) return;
-
-        const headerRect = headerEl.getBoundingClientRect();
-        const itemRect = itemEl.getBoundingClientRect();
-
-        setIndicator({
-            left: itemRect.left - headerRect.left,
-            width: itemRect.width,
-            ready: true,
-        });
-    }, []);
 
     React.useEffect(() => {
         const handleScroll = () => {
@@ -60,25 +39,9 @@ export function Navbar() {
             }
         };
         window.addEventListener("scroll", handleScroll, { passive: true });
-        handleScroll(); // Initial check
+        handleScroll();
         return () => window.removeEventListener("scroll", handleScroll);
     }, [navItems]);
-
-    // Recalculate indicator on active section change or on resize
-    React.useEffect(() => {
-        updateIndicator(activeSection);
-    }, [activeSection, updateIndicator]);
-
-    React.useEffect(() => {
-        const handleResize = () => updateIndicator(activeSection);
-        window.addEventListener("resize", handleResize);
-        return () => window.removeEventListener("resize", handleResize);
-    }, [activeSection, updateIndicator]);
-
-    const toggleLanguage = () => {
-        const newLang = language === "en" ? "ar" : "en";
-        setLanguage(newLang);
-    };
 
     const handleNavClick = (href: string) => {
         if (lenis) {
@@ -94,114 +57,108 @@ export function Navbar() {
 
     return (
         <header
-            ref={headerRef}
             className={cn(
                 "fixed top-0 w-full z-50 transition-all duration-500",
-                scrolled
-                    ? "bg-background/60 backdrop-blur-2xl border-b border-white/[0.08] shadow-[0_4px_30px_-10px_rgba(0,0,0,0.1)]"
-                    : "bg-transparent border-b border-transparent"
+                scrolled ? "pt-4 md:pt-6" : "pt-6 md:pt-10"
             )}
         >
-            {/* Sliding active indicator */}
-            <AnimatePresence>
-                {indicator.ready && (
-                    <motion.div
-                        aria-hidden="true"
-                        className="absolute bottom-0 h-[3px] pointer-events-none z-10"
-                        style={{
-                            background: "linear-gradient(90deg, transparent, var(--primary), transparent)",
-                        }}
-                        animate={{
-                            left: indicator.left,
-                            width: indicator.width,
-                            opacity: 1,
-                        }}
-                        initial={{ opacity: 0 }}
-                        transition={{ type: "spring", stiffness: 350, damping: 30 }}
-                    >
-                        {/* Glow effect */}
-                        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[15px] bg-primary/40 blur-[10px] rounded-full" />
-                    </motion.div>
-                )}
-            </AnimatePresence>
+            <div className="container max-w-6xl mx-auto px-4">
+                <div 
+                    className={cn(
+                        "flex items-center justify-between transition-all duration-700 ease-out",
+                        scrolled 
+                            ? "bg-background/70 backdrop-blur-3xl border border-border/50 shadow-[0_10px_40px_-15px_rgba(var(--primary),0.2)] rounded-full px-6 h-16" 
+                            : "bg-transparent h-20 px-2 border border-transparent shadow-none"
+                    )}
+                >
+                    {/* Logo */}
+                    <Link href="/" className="flex items-center z-50 hover:scale-105 transition-transform duration-300">
+                        <Logo scrolled={scrolled} />
+                    </Link>
 
-            <div className={cn(
-                "container mx-auto px-4 flex items-center justify-between transition-all duration-500",
-                scrolled ? "h-16" : "h-[80px]"
-            )}>
-                {/* Logo */}
-                <Link href="/" className="flex items-center scale-110">
-                    <Logo scrolled={scrolled} />
-                </Link>
+                    {/* Desktop Navigation */}
+                    <nav className="hidden md:flex flex-1 items-center justify-center">
+                        <div className={cn(
+                            "flex items-center p-1 rounded-full transition-all duration-500 backdrop-blur-sm",
+                            scrolled ? "bg-white/5 dark:bg-white/5" : "bg-transparent"
+                        )}>
+                            {navItems.map((item) => {
+                                const isActive = activeSection === item.href;
+                                return (
+                                    <Link
+                                        key={item.href}
+                                        href={`#${item.href}`}
+                                        onClick={(e) => {
+                                            e.preventDefault();
+                                            handleNavClick(item.href);
+                                        }}
+                                        className={cn(
+                                            "relative text-sm font-medium tracking-wide transition-all duration-500 px-5 py-2 rounded-full outline-none group",
+                                            isActive
+                                                ? "text-primary-foreground"
+                                                : "text-foreground/70 hover:text-foreground"
+                                        )}
+                                    >
+                                        {isActive && (
+                                            <motion.div
+                                                layoutId="active-nav-pill"
+                                                className="absolute inset-0 bg-primary/90 backdrop-blur-md rounded-full -z-10 shadow-[0_0_15px_-3px_var(--primary)]"
+                                                transition={{ type: "spring", stiffness: 400, damping: 30 }}
+                                            />
+                                        )}
+                                        {/* Subtle hover background for non-active items */}
+                                        {!isActive && (
+                                            <div className="absolute inset-0 bg-primary/10 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10" />
+                                        )}
+                                        <span className="relative z-10">{item.name}</span>
+                                    </Link>
+                                );
+                            })}
+                        </div>
+                    </nav>
 
-                {/* Desktop Navigation */}
-                <nav className="hidden md:flex items-center gap-8">
-                    <div className="flex items-center gap-6 mr-4">
-                        {navItems.map((item) => {
-                            const isActive = activeSection === item.href;
-                            return (
-                                <Link
-                                    key={item.href}
-                                    href={`#${item.href}`}
-                                    onClick={(e) => {
-                                        e.preventDefault();
-                                        handleNavClick(item.href);
-                                    }}
-                                    ref={(el) => {
-                                        if (el) itemRefsMap.current.set(item.href, el);
-                                        else itemRefsMap.current.delete(item.href);
-                                    }}
-                                    className={cn(
-                                        "text-sm font-bold tracking-wide transition-all duration-300 relative py-2 px-1",
-                                        isActive
-                                            ? "text-primary translate-y-[-1px]"
-                                            : "text-foreground/60 hover:text-primary"
-                                    )}
-                                >
-                                    {item.name}
-                                </Link>
-                            );
-                        })}
-                    </div>
-
-                    <div className="flex items-center gap-4 border-l border-white/10 pl-6">
-                        <ThemeToggle />
+                    {/* Desktop CTA & Toggles */}
+                    <div className="hidden md:flex items-center gap-3 z-50">
+                        <div className="mr-2">
+                            <ThemeToggle />
+                        </div>
                         <Button 
-                            variant="default" 
+                            variant="premium" 
                             size="sm" 
-                            className="rounded-full px-6 font-black text-xs tracking-widest uppercase shadow-lg shadow-primary/20 hover:shadow-primary/40 transition-all hover:scale-105 active:scale-95 cursor-pointer"
+                            className="rounded-full px-6 h-10 font-bold text-xs tracking-wide uppercase transition-all hover:scale-105 active:scale-95 cursor-pointer ml-2"
                             onClick={() => handleNavClick("contact")}
                         >
                             {t.navbar.contact}
                         </Button>
                     </div>
-                </nav>
 
-                {/* Mobile Menu Toggle */}
-                <div className="flex items-center gap-3 md:hidden">
-                    <ThemeToggle />
-                    <Button
-                        variant="ghost"
-                        size="icon"
-                        className="rounded-xl bg-secondary/30"
-                        onClick={() => setIsOpen(!isOpen)}
-                        aria-label="Toggle menu"
-                    >
-                        {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-                    </Button>
+                    {/* Mobile Menu Toggle */}
+                    <div className="flex md:hidden items-center gap-3 z-50">
+                        <ThemeToggle />
+                        <Button
+                            variant="ghost"
+                            size="icon"
+                            className="rounded-full bg-secondary/30 h-10 w-10 hover:bg-secondary/50"
+                            onClick={() => setIsOpen(!isOpen)}
+                            aria-label="Toggle menu"
+                        >
+                            {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+                        </Button>
+                    </div>
                 </div>
             </div>
 
-            {/* Mobile Menu */}
+            {/* Mobile Menu Overlay */}
             <AnimatePresence>
                 {isOpen && (
                     <motion.div 
-                        initial={{ opacity: 0, y: -20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -20 }}
-                        className="md:hidden absolute top-full left-0 w-full bg-background/95 backdrop-blur-2xl border-b border-white/10 shadow-2xl p-6"
+                        initial={{ opacity: 0, y: -20, scale: 0.95 }}
+                        animate={{ opacity: 1, y: 0, scale: 1 }}
+                        exit={{ opacity: 0, y: -20, scale: 0.95 }}
+                        transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                        className="md:hidden absolute top-[85px] left-4 right-4 bg-background/95 backdrop-blur-3xl border border-border shadow-2xl shadow-primary/10 rounded-3xl p-6 overflow-hidden"
                     >
-                        <nav className="flex flex-col gap-2">
+                        <nav className="flex flex-col gap-2 relative z-10">
                             {navItems.map((item) => {
                                 const isActive = activeSection === item.href;
                                 return (
@@ -209,31 +166,38 @@ export function Navbar() {
                                         key={item.href}
                                         href={`#${item.href}`}
                                         className={cn(
-                                            "text-lg font-bold px-4 py-3 rounded-2xl transition-all duration-300",
+                                            "relative text-lg font-medium px-6 py-4 rounded-2xl transition-all duration-300 overflow-hidden group",
                                             isActive
-                                                ? "bg-primary/10 text-primary translate-x-1"
-                                                : "text-foreground/70 hover:bg-secondary/50 hover:text-foreground"
+                                                ? "text-primary-foreground font-semibold"
+                                                : "text-foreground/80 hover:text-foreground hover:bg-secondary/30"
                                         )}
                                         onClick={(e) => {
                                             e.preventDefault();
                                             handleNavClick(item.href);
                                         }}
                                     >
-                                        {item.name}
+                                        {isActive && (
+                                            <motion.div
+                                                layoutId="mobile-active-bg"
+                                                className="absolute inset-0 bg-primary/90 z-[-1] rounded-2xl shadow-[0_0_15px_-3px_var(--primary)]"
+                                                initial={false}
+                                                transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                                            />
+                                        )}
+                                        <span className="relative z-10">{item.name}</span>
                                     </Link>
                                 );
                             })}
                             
-                            <div className="h-px bg-white/10 my-4" />
+                            <div className="h-px bg-border my-4" />
                             
-                            <div className="flex items-center justify-between gap-4">
-                                <Button 
-                                    className="flex w-full font-black text-xs uppercase tracking-widest h-12 rounded-2xl cursor-pointer"
-                                    onClick={() => handleNavClick("contact")}
-                                >
-                                    {t.navbar.contact}
-                                </Button>
-                            </div>
+                            <Button 
+                                variant="premium"
+                                className="flex w-full font-bold text-[13px] uppercase tracking-wider h-14 rounded-2xl cursor-pointer shadow-xl shadow-primary/20"
+                                onClick={() => handleNavClick("contact")}
+                            >
+                                {t.navbar.contact}
+                            </Button>
                         </nav>
                     </motion.div>
                 )}

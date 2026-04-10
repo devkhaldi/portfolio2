@@ -13,6 +13,21 @@ export interface Project {
 
 export const projects: Project[] = [
     {
+        id: "lynxia",
+        title: "Lynxia Assur Conseil",
+        category: { fr: "ASSURANCE", ar: "تأمين", en: "INSURANCE" },
+        badge: { fr: "SITE WEB", ar: "موقع ويب", en: "WEBSITE" },
+        url: "https://www.lynxiaconseil.fr/",
+        image: "/img/lynxia.png",
+        description: {
+            fr: "Plateforme d'assurance professionnelle offrant des solutions claires, rapides et fiables pour les entreprises. Expérience 100% digitale et humaine.",
+            ar: "منصة تأمين مهنية تقدم حلولاً واضحة وسريعة وموثوقة للشركات. تجربة رقمية وإنسانية ومتكاملة.",
+            en: "Professional insurance platform offering clear, fast, and reliable solutions for businesses. A 100% digital and human experience."
+        },
+        type: "custom",
+        technologies: ["React", "Next.js", "Framer Motion", "Tailwind CSS"]
+    },
+    {
         id: "1",
         title: "Lille Noire",
         category: { fr: "CAFÉ", ar: "مقهى", en: "COFFEE SHOP" },

@@ -1,15 +1,10 @@
 import type { Metadata } from "next";
-import { Inter, Space_Grotesk, IBM_Plex_Sans_Arabic } from "next/font/google";
+import { Inter, IBM_Plex_Sans_Arabic } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 
 const inter = Inter({
   variable: "--font-inter",
-  subsets: ["latin"],
-});
-
-const spaceGrotesk = Space_Grotesk({
-  variable: "--font-space-grotesk",
   subsets: ["latin"],
 });
 
@@ -39,7 +34,6 @@ export default function RootLayout({
       <body
         className={cn(
           inter.variable,
-          spaceGrotesk.variable,
           ibmPlexArabic.variable,
           "antialiased min-h-screen font-sans"
         )}

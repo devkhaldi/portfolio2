@@ -92,9 +92,9 @@ export function Services() {
                             className="flex"
                         >
                             <Card className={cn(
-                                "relative flex flex-col w-full rounded-[2.5rem] border-white/5 bg-background/40 backdrop-blur-2xl overflow-hidden transition-all duration-500 group shadow-[inset_0_1px_1px_rgba(255,255,255,0.05)]",
-                                tier.popular && "border-primary/30 bg-primary/5 ring-1 ring-primary/20 shadow-[0_0_40px_-10px_rgba(139,92,246,0.3)] scale-105 z-20",
-                                !tier.popular && "hover:border-white/20 hover:bg-white/[0.02] hover:-translate-y-4 hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.5)]"
+                                "relative flex flex-col w-full rounded-[2.5rem] border-border/10 bg-background/30 backdrop-blur-[32px] overflow-hidden transition-all duration-500 group shadow-[inset_0_1px_1px_rgba(255,255,255,0.1)]",
+                                tier.popular && "border-primary/40 bg-primary/5 ring-1 ring-primary/30 shadow-2xl shadow-primary/20 scale-105 z-20",
+                                !tier.popular && "hover:border-primary/20 hover:bg-white/[0.03] hover:-translate-y-4 hover:shadow-2xl hover:shadow-primary/10"
                             )}>
                                 {tier.popular && (
                                     <div className="absolute top-6 right-8">
@@ -165,11 +165,7 @@ export function Services() {
                                     </Button>
                                 </div>
 
-                                {/* Bottom Glow & Hover Overlay */}
-                                <div className={cn(
-                                    "absolute bottom-0 left-0 w-full h-1.5 opacity-20 bg-gradient-to-r transition-all duration-500 group-hover:opacity-100 group-hover:h-3",
-                                    tier.color
-                                )} />
+                                {/* Hover Overlay */}
                                 <div className={cn(
                                     "absolute inset-0 opacity-0 group-hover:opacity-[0.03] transition-opacity duration-700 bg-gradient-to-br pointer-events-none",
                                     tier.color

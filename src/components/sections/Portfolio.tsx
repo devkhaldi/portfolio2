@@ -65,13 +65,13 @@ export function Portfolio() {
                                 viewport={{ once: true, margin: "-50px" }}
                                 className="group h-full"
                             >
-                                <Card className="relative overflow-hidden bg-background/40 backdrop-blur-2xl transition-all duration-500 h-full flex flex-col rounded-[2.5rem] border border-white/5 shadow-[inset_0_1px_1px_rgba(255,255,255,0.05)] group-hover:bg-white/[0.02] group-hover:border-white/20 group-hover:-translate-y-4 group-hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.5)]">
+                                <Card className="relative overflow-hidden bg-background/30 backdrop-blur-[32px] transition-all duration-700 h-full flex flex-col rounded-[2.5rem] border border-border/10 shadow-[inset_0_1px_1px_rgba(255,255,255,0.1)] group-hover:bg-white/[0.03] group-hover:border-primary/30 group-hover:-translate-y-4 group-hover:shadow-2xl group-hover:shadow-primary/10">
                                     <div className="relative aspect-[16/10] overflow-hidden bg-secondary/20">
                                         <Image
                                             src={project.image}
                                             alt={project.title}
                                             fill
-                                            className="object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
+                                            className="object-cover group-hover:scale-[1.12] transition-transform duration-700 ease-out"
                                             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                         />
 
@@ -84,7 +84,7 @@ export function Portfolio() {
 
                                         {/* Modern Overlay */}
                                         <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-700 flex flex-col items-center justify-center gap-4 z-10 backdrop-blur-[2px]">
-                                            <Button variant="default" size="lg" className="rounded-full px-8 bg-primary hover:bg-primary/90 text-white font-black shadow-[0_0_20px_rgba(139,92,246,0.3)] hover:shadow-[0_0_40px_rgba(139,92,246,0.8)] translate-y-10 group-hover:translate-y-0 transition-all duration-500" asChild>
+                                            <Button variant="default" size="lg" className="rounded-full px-8 bg-primary hover:bg-primary/90 text-primary-foreground font-black shadow-lg shadow-primary/30 hover:shadow-xl hover:shadow-primary/50 translate-y-12 group-hover:translate-y-0 transition-all duration-500" asChild>
                                                 <Link href={project.url} target="_blank">
                                                     {t.portfolio.preview} <ExternalLink className="ms-2 h-4 w-4" />
                                                 </Link>
@@ -101,7 +101,7 @@ export function Portfolio() {
                                                 </span>
                                             </div>
 
-                                            <h3 className="text-2xl lg:text-3xl font-black tracking-tight leading-none group-hover:translate-x-1 transition-transform duration-300 group-hover:text-primary">
+                                            <h3 className="text-2xl lg:text-3xl font-black tracking-tight leading-none group-hover:translate-x-2 transition-transform duration-500 group-hover:text-primary">
                                                 {project.title}
                                             </h3>
 
